@@ -15,6 +15,15 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
 })
 export class AppComponent {
   title = 'angular-project';
+  showSecret = false;
+  secretPassword = 'Secret Password = Tuna';
+  log: any[] = [];
+
+  onToggleDisplay() {
+    this.showSecret = !this.showSecret;
+    this.log.push(new Date());
+    // this.log.push(this.log.length + 1);
+  }
 }
 
 bootstrapApplication(AppComponent)
